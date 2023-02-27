@@ -57,29 +57,33 @@ p {
 }
 
 header .header__menu {
+  display: flex;
   background: #EFEFEF;
   padding: 16px 0;
 }
-header .header__menu .menu {
+header .menu {
   margin: 0 auto;
+  width: 100%;
   max-width: 32rem;
 }
-header .header__menu .menu .menu-item {
+header .menu .menu-item {
   line-height: 16px;
 }
-header .header__menu .burger {
+header .burger {
   display: none;
   position: relative;
+  top: 0;
   width: 1.5em;
   height: 1.5em;
   margin: 0 15px;
+  cursor: pointer;
 }
-header .header__menu .burger span {
+header .burger span {
   top: 0.7em;
 }
-header .header__menu .burger::before,
-header .header__menu .burger::after,
-header .header__menu .burger span {
+header .burger::before,
+header .burger::after,
+header .burger span {
   content: "";
   position: absolute;
   width: 100%;
@@ -87,19 +91,31 @@ header .header__menu .burger span {
   right: 0;
   background-color: #333333;
 }
-header .header__menu .burger::after {
+header .burger::after {
   bottom: 0;
 }
-header .header__menu .burger::before {
+header .burger::before {
   top: 0;
 }
 @media (max-width: 768px) {
-  header .header__menu .burger {
+  header .burger {
     display: block;
   }
-  header .header__menu .menu {
+  header .menu {
     display: none;
   }
+}
+header .show-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
+  padding: 3%;
+  margin: 0 auto;
+  font-size: 16px;
+  background-color: #EFEFEF;
 }
 header .header__contacts {
   display: flex;
