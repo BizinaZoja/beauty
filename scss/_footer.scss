@@ -38,6 +38,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    a img {
+        display: block;
+    }
 }
 
 .footer__callback {

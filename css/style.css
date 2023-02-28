@@ -47,7 +47,7 @@ p {
   transition: all 0.2s ease;
 }
 .btn:hover {
-  box-shadow: 0 5px 5px #66C05D;
+  box-shadow: 0 2px 7px #66C05D;
 }
 
 .container {
@@ -375,16 +375,25 @@ main .offer__banner-descr {
 main .banner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 main .banner-content {
   width: 60%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 25px;
 }
 main .banner-content input {
   border: none;
+  outline: none;
+  text-align: start;
+}
+main .banner-content input:hover {
+  box-shadow: 0 2px 7px #EFEFEF;
+}
+main .banner-content input:hover:focus {
+  box-shadow: 0 2px 7px #000000;
 }
 main .banner-content input::-moz-placeholder {
   text-align: start;
@@ -418,6 +427,9 @@ main .offer__banner-map {
   main .offer__banner-map {
     width: 75%;
   }
+}
+main .offer__banner-btn:hover {
+  box-shadow: 0 2px 7px #EFEFEF;
 }
 @media (max-width: 992px) {
   main .offer__banner-btn {
@@ -464,6 +476,9 @@ footer .social-media-item {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+footer .social-media-item a img {
+  display: block;
 }
 footer .footer__callback {
   display: flex;
